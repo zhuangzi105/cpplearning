@@ -1,0 +1,136 @@
+======================================================================================
+
+参考序列号（后20位随意），推荐使用注册机
+
+Adobe After Effects CC 2014
+1023-xxxx-xxxx-xxxx-xxxx-xxxx
+
+Adobe Audition CC 2014
+1137-xxxx-xxxx-xxxx-xxxx-xxxx
+
+Adobe Dreamweaver CC 2014
+1192-xxxx-xxxx-xxxx-xxxx-xxxx
+
+Adobe Edge Animate CC 2014
+1582-xxxx-xxxx-xxxx-xxxx-xxxx
+
+Adobe Flash Professional CC 2014
+1302-xxxx-xxxx-xxxx-xxxx-xxxx
+
+Adobe Illustrator CC 2014
+1034-xxxx-xxxx-xxxx-xxxx-xxxx
+
+Adobe InCopy CC 2014
+1036-xxxx-xxxx-xxxx-xxxx-xxxx
+
+Adobe InDesign CC 2014
+1037-xxxx-xxxx-xxxx-xxxx-xxxx
+
+Adobe Muse CC 2014
+1576-xxxx-xxxx-xxxx-xxxx-xxxx
+
+Adobe Photoshop CC 2014
+1045-xxxx-xxxx-xxxx-xxxx-xxxx
+
+Adobe Photoshop Lightroom 5.5
+1160-xxxx-xxxx-xxxx-xxxx-xxxx
+
+Adobe Prelude CC 2014
+1597-xxxx-xxxx-xxxx-xxxx-xxxx
+
+Adobe Premiere Pro CC 2014
+1132-xxxx-xxxx-xxxx-xxxx-xxxx
+
+Adobe SpeedGrade CC 2014
+1614-xxxx-xxxx-xxxx-xxxx-xxxx
+
+======================================================================================
+
+  安装前请确保硬件、系统环境，必要时卸载、清理旧版程序。
+
+  检查本机AAM版本。必要时可直接删除AAM文件目录。
+
+	正确的AAM文件目录：%CommonProgramFiles%\Adobe\OOBE
+
+	32位系统AAM文件目录：
+	C:\Program Files\Common Files\Adobe\OOBE
+
+	64位系统AAM文件目录：
+	C:\Program Files (x86)\Common Files\Adobe\OOBE
+
+	参考环境变量：
+	%CommonProgramFiles%
+	%CommonProgramFiles(x86)%
+	%CommonProgramW6432%
+
+  检查本机激活信息。必要时可直接清除激活信息。
+
+  在HOST文件中添加信息屏蔽联网激活。
+
+	C:\Windows\System32\drivers\etc\hosts
+
+	127.0.0.1	activate.adobe.com
+	127.0.0.1	ereg.adobe.com
+	127.0.0.1	hlrcv.stage.adobe.com
+	127.0.0.1	lm.licenses.adobe.com
+	127.0.0.1	lmlicenses.wip4.adobe.com
+	127.0.0.1	na1r.services.adobe.com
+	127.0.0.1	na2m-pr.licenses.adobe.com
+	127.0.0.1	practivate.adobe.com
+	127.0.0.1	wip.adobe.com
+
+	全局代理环境(如VPN)下HOST不起作用，必须在防火墙中屏蔽adobe_licutil.exe的网络访问。
+
+======================================================================================
+
+正常安装、离线激活步骤：
+
+断网->运行Set-up.exe->(忽略，如果提示)
+->安装(我已经购买)->登录->稍后连接->接受
+->使用注册机算号或其他序列号填入(请保留好序列号)->下一步
+->稍后连接->选项，安装
+->安装完成后请勿选择启动或关闭，直接点击右上角关闭
+->运行AAMv8_P7_for_cc2014OA.exe完成操作
+->打开程序->稍等几秒弹出需要登录界面
+->连接Internet时是否出现问题？->脱机激活
+->生成请求代码->复制请求代码到注册机中算出响应代码粘贴回去
+->点击激活->脱机激活完成后请勿选择启动或关闭，直接点击右上角关闭
+->运行AAMv8_P7_for_cc2014OA_restore.exe完成操作
+->打开程序->接受
+DONE！
+
+Offline->Set-up.exe->(Ignore,if you need)
+->Installation->login->later->Accept
+->Genetate sn (keygen)->NEXT
+->later->INSTALL
+->DO NOT "Click Launch",Close the window
+->RUN AAMv8_P7_for_cc2014OA.exe,Click OK
+->OPEN APP->wait a moment
+->Having trouble connecting to the internet?->Offline Activation
+->Genetate Request Code->copy Request Code to keygen,genetate Response Code and paste back
+->Click Activate->DO NOT "Click Launch",Close the window
+->RUN AAMv8_P7_for_cc2014OA_restore.exe,Click OK
+->OPEN APP->Accept
+DONE！
+
+======================================================================================
+
+清除所有激活信息后的离线激活步骤：
+
+->运行AAMv8_P7_for_cc2014OA.exe完成操作
+断网->打开程序->以后登录->对此软件进行许可->请输入序列号
+->使用注册机算号或其他序列号填入(请保留好序列号)->下一步
+->以后登录->接受->关闭软件，打开软件
+->稍等几秒弹出需要登录界面(如果不弹出界面，请多关闭打开软件几次)
+->连接Internet时是否出现问题？->脱机激活
+->生成请求代码->复制请求代码到注册机中算出响应代码粘贴回去
+->点击激活->脱机激活完成后请勿选择启动或关闭，直接点击右上角关闭
+->运行AAMv8_P7_for_cc2014OA_restore.exe完成操作
+DONE！
+
+======================================================================================
+
+如果出现无限循环的接受许可，请确认运行过AAMv8_P7_for_cc2014OA_restore.exe并完成了操作
+如果出现无限循环的需要登录，请更换SN再离线激活！部分SN在黑名单中。
+
+======================================================================================
