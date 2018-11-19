@@ -212,7 +212,6 @@ void ch10_8demo(){
 void ch10_9demo()
 {
     int array1[]={1,2,3,4,5,6,7,8};
-    int array2[]={11,12,13,14,15,16,17,18};
     //vector<int> v1(array1,array1+sizeof(array1)/sizeof(int));
     swap(array1[2],array1[4]);
     iter_swap(array1+2,array1+4);
@@ -221,12 +220,65 @@ void ch10_9demo()
     copy(array1,array1+8,ostream_iterator<int>(cout));
     
 }
+void ch10_10demo()
+{
+    int array1[]={1,2,3,4,5,6,7,8,11,12};
+    int array2[]={11,12,13,14,15,16,17,18,5,6,7};
+    set<int> s1(array1,array1+sizeof(array1)/sizeof(int));
+    set<int> s2(array2,array2+sizeof(array2)/sizeof(int));
+    set_intersection(s1.begin(), s1.end(), s2.begin(), s2.end(), ostream_iterator<int>(cout," "));
+    set_union(s1.begin(), s1.end(), s2.begin(), s2.end(), ostream_iterator<int>(cout," "));
+     set_difference(s1.begin(), s1.end(), s2.begin(), s2.end(), ostream_iterator<int>(cout," "));
+}
+void ch10_11demo()
+{
+    int arr[]={1,1,4,4,5};
+    vector<int> s(arr,arr+sizeof(arr)/sizeof(int));
+    s.erase(unique(s.begin(), s.end()),s.end());
+    copy(s.begin(), s.end(), ostream_iterator<int>(cout," "));
+    
+    list<int> l(arr,arr+sizeof(arr)/sizeof(int));
+    
 
+}
+
+#include <random>
+    int gerandom()
+    {
+        static default_random_engine e;
+        static uniform_int_distribution<int> u(0,9);
+        return u(e);
+    }
+
+int power(int x,int y)
+{
+    int result=1;
+    while(y-- >0) result*=x;
+    return result;
+}
+
+void ch10_12demo()
+{
+    vector<int> v(100);
+    generate(v.begin(),v.end(),gerandom);
+    //sort(v.begin(),v.end());
+    copy(v.begin(), v.end(), ostream_iterator<int>(cout," "));
+    cout<<endl;
+    transform(v.begin(), v.end(), ostream_iterator<int>(cout," "), bind1st(ptr_fun(power),5));
+     cout<<endl;
+    transform(v.begin(), v.end(), ostream_iterator<int>(cout," "), bind2nd(ptr_fun(power),7));
+     cout<<endl;
+    transform(v.begin(),v.end(),v.begin(),ostream_iterator<int>(cout," "),power);
+
+}
 int main(int argc, const char * argv[]) {
     //ch10_5demo();
     //ch10_6demo();
    // ch10_7demo();
     //ch10_8demo();
-      ch10_9demo();
+      //ch10_9demo();
+    //ch10_10demo();
+    //ch10_11demo();
+    ch10_12demo();
     return 0;
 }
