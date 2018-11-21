@@ -112,16 +112,16 @@ void ch10_5demo()
     int n=2000000,m=10;
     //vector
     time_t begin=time(0);
-    ch10_5noerase<vector<int>>(n,m);
+    ch10_5noerase<vector<int> >(n,m);
     time_t end1=time(0);
     cout<<"vector time: "<< end1-begin<<endl;
     //deque
-    ch10_5noerase<deque<int>>(n,m);
+    ch10_5noerase<deque<int> >(n,m);
     time_t end2=time(0);
     cout<<"deque time: "<< end2-end1<<endl;
     
     //list
-    ch10_5<list<int>>(n,m);
+    ch10_5<list<int> >(n,m);
     time_t end3=time(0);
     cout<<"list time: "<< end3-end2<<endl;
 }
@@ -140,8 +140,8 @@ void exchange(list<T>& l1, typename list<T>::iterator p1,
 
 void ch10_6demo()
 {
-    list<int> l1({1,2,3,4});
-     list<int> l2({11,12,13,14});
+    list<int> l1( {1,2,3,4});
+    list<int> l2( {11,12,13,14});
     exchange(l1,++++l1.begin(),l2,++++l2.begin());
     copy(l1.begin(),l1.end(),ostream_iterator<int>(cout, " "));
     cout<<endl;
@@ -153,6 +153,7 @@ void ch10_6demo()
 #include <queue>
 #include <set>
 #include <map>
+#include <functional>
 template<class T>
 void ch10_7()
 {
@@ -176,9 +177,9 @@ void ch10_7()
 }
 void ch10_7demo()
 {
-    ch10_7<stack<int>>();
+    ch10_7<stack<int> >();
     //ch10_7<queue<int>>();
-   ch10_7<priority_queue<int,vector<int>,less<int> >>();
+   ch10_7<priority_queue<int,vector<int>,less<int> > >();
 }
 
 void ch10_8demo(){
@@ -264,11 +265,16 @@ void ch10_12demo()
     //sort(v.begin(),v.end());
     copy(v.begin(), v.end(), ostream_iterator<int>(cout," "));
     cout<<endl;
-    transform(v.begin(), v.end(), ostream_iterator<int>(cout," "), bind1st(ptr_fun(power),5));
+    transform(v.begin(), v.end(), ostream_iterator<int>(cout," "),
+              bind(power,5,std::placeholders::_1));
+    //binder1st<int> (power,typename int::first_argument_type(5));
+    //bind1st(ptr_fun(power),5));
      cout<<endl;
-    transform(v.begin(), v.end(), ostream_iterator<int>(cout," "), bind2nd(ptr_fun(power),7));
+    transform(v.begin(), v.end(), ostream_iterator<int>(cout," "), bind(power,std::placeholders::_1,7));
      cout<<endl;
-    transform(v.begin(),v.end(),v.begin(),ostream_iterator<int>(cout," "),power);
+    transform(v.begin(), v.end(), ostream_iterator<int>(cout," "), bind(power,std::placeholders::_1,std::placeholders::_1));
+    cout<<endl;
+   // transform(v.begin(),v.end(),v.begin(),ostream_iterator<int>(cout," "),power);
 
 }
 int main(int argc, const char * argv[]) {
